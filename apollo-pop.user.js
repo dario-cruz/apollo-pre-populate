@@ -25,15 +25,33 @@
     document.getElementById('audit_properties_Is the AA demonstrating safe and standard work practices for pushing or pulling').value = 'Yes'
     document.getElementById('audit_properties_Is the AA observed bending at the knees and not the waist to complete tasks below their power zone').value = 'Yes'
     document.getElementById('audit_properties_Have you (the auditor) watched the Working Well Huddle material for the week').value = 'Yes'
+    document.getElementById('audit_properties_Is the AA observed bending at the knees and not the waist to complete tasks below their power zone').value = 'Yes'
     
+
     // Simulate click for all checkbox elements.
 
-    let spanArray = document.querySelector('span')
+    let spanArray = document.querySelectorAll('span')
 
     spanArray.forEach(element => {
-        
+        switch(element.innerText) {
+            case 'Scanner Harness':
+                element.click()
+                break
+            case 'Gloves':
+                element.click()
+                break
+            case 'Safety Shoes':
+                element.click()
+                break
+            case 'Eye Protection (PS/ Smalls Induct)':
+                element.click()
+                break
+            case 'No':
+                element.click()
+                break
+            default:
+                break;
+        }
     })
-
-
 
 })();
